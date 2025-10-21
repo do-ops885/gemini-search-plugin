@@ -28,7 +28,7 @@ The agent uses `gemini -p` (headless mode) with `--yolo` (auto-approval) and res
 
 ## Search Patterns
 
-- Uses Gemini CLI headless mode: `gemini -p "query" --yolo --output-format json`
+- Uses Gemini CLI headless mode: `gemini -p "/tool:googleSearch query:\"search query\" raw:true" --yolo --output-format json -m "gemini-2.5-flash"`
 - Restricts Gemini to only `google_web_search` tool via settings.json
 - Not using Claude's internal web search functionality
 - Handles different query types (factual, research, news)

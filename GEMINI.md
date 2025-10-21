@@ -27,7 +27,7 @@ This ensures that when the Gemini CLI agent decides which tool to use, `google_w
 The plugin uses the Gemini CLI in headless mode with the `--yolo` flag:
 
 ```bash
-gemini -p "search query" --yolo --output-format json
+gemini -p "/tool:googleSearch query:\"search query\" raw:true" --yolo --output-format json -m "gemini-2.5-flash"
 ```
 
 - **`-p` (--prompt)**: Runs the CLI in headless mode with a direct prompt
