@@ -31,11 +31,13 @@ This project follows the Anthropic Code of Conduct. By participating, you are ex
 Before contributing, ensure you have:
 
 1. **Gemini CLI** installed:
+
    ```bash
-   npm install -g @google/genai-cli
+   npm install -g @google/gemini-cli
    ```
 
 2. **Development tools**:
+
    ```bash
    # ShellCheck for script linting
    brew install shellcheck  # macOS
@@ -53,12 +55,14 @@ Before contributing, ensure you have:
 ## Development Setup
 
 1. **Fork and clone** the repository:
+
    ```bash
    git clone https://github.com/YOUR-USERNAME/gemini-search.git
    cd gemini-search
    ```
 
 2. **Create a feature branch**:
+
    ```bash
    git checkout -b feature/your-feature-name
    ```
@@ -66,11 +70,13 @@ Before contributing, ensure you have:
 3. **Make your changes** and test thoroughly
 
 4. **Run linting**:
+
    ```bash
    shellcheck scripts/*.sh
    ```
 
 5. **Test your changes**:
+
    ```bash
    bash tests/run-integration-tests.sh
    ```
@@ -104,6 +110,7 @@ We welcome several types of contributions:
 All bash scripts must:
 
 1. **Use strict error handling**:
+
    ```bash
    set -euo pipefail
    ```
@@ -115,6 +122,7 @@ All bash scripts must:
    - Quote array expansions properly (SC2206)
 
 3. **Include proper documentation**:
+
    ```bash
    # Function: Function name
    # Arguments:
@@ -127,6 +135,7 @@ All bash scripts must:
    ```
 
 4. **Use meaningful variable names**:
+
    ```bash
    # Good
    local query_string="$1"
@@ -138,6 +147,7 @@ All bash scripts must:
    ```
 
 5. **Handle errors gracefully**:
+
    ```bash
    if ! result=$(some_command); then
        log_error "Command failed: some_command"
@@ -279,6 +289,7 @@ Follow conventional commits format:
 ```
 
 **Types:**
+
 - `feat`: New feature
 - `fix`: Bug fix
 - `docs`: Documentation changes
@@ -288,6 +299,7 @@ Follow conventional commits format:
 - `chore`: Maintenance tasks
 
 **Example:**
+
 ```
 feat(search): add support for multi-engine search
 
@@ -344,6 +356,7 @@ When reporting bugs, include:
    - Stack traces
 
 **Template:**
+
 ```markdown
 ### Environment
 - OS: macOS 14.0
@@ -362,6 +375,7 @@ Error: "Gemini CLI search failed"
 
 ### Logs
 ```
+
 <error logs here>
 ```
 ```

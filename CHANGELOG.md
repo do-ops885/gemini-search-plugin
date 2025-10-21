@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.1.1] - 2025-10-21
 
 ### Changed
+
 - **BREAKING**: Updated Gemini CLI command format to use explicit `googleSearch` tool invocation
   - Changed from: `gemini -p "query" --yolo --output-format json`
   - Changed to: `gemini -p "/tool:googleSearch query:\"search_text\" raw:true" --yolo --output-format json -m "gemini-2.5-flash"`
@@ -17,6 +18,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - `scripts/extract-content.sh`
 
 ### Fixed
+
 - Fixed validation function arithmetic operation that could cause script exit with `set -e`
 - Improved ShellCheck compliance:
   - Split variable declarations and assignments (SC2155)
@@ -26,6 +28,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fixed false positive validation to properly detect and filter invalid domains
 
 ### Improved
+
 - Enhanced code quality and reliability with ShellCheck best practices
 - Better error handling in validation and search functions
 - More robust script execution with proper return value handling
@@ -33,6 +36,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.1.0] - 2025-10-20
 
 ### Added
+
 - Initial release of Gemini Search Plugin
 - Core search functionality using Gemini CLI with `google_web_search` tool
 - Smart caching system with 1-hour TTL and MD5 keying
@@ -57,6 +61,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - `scripts/prepare-release.sh` - Release preparation
 
 ### Features
+
 - **Gemini CLI Integration**: Uses Gemini CLI in headless mode with `--yolo` flag
 - **Tool Restriction**: Limits Gemini to only `google_web_search` tool via `.gemini/settings.json`
 - **Grounded Results**: All results from Google's web search via Gemini
@@ -66,6 +71,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Security**: URL validation, content size limits, timeout handling
 
 ### Documentation
+
 - Comprehensive README.md with features, usage, and configuration
 - GEMINI.md explaining Gemini CLI integration
 - Detailed agent documentation
@@ -73,6 +79,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Validation methodology documentation
 
 ### Configuration
+
 - Environment variable support for all settings
 - Configurable cache TTL, retry logic, and timeouts
 - Adjustable content extraction limits
@@ -81,6 +88,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Planned
+
 - Enhanced content extraction with better parsing
 - Additional search engine fallbacks
 - Improved relevance scoring algorithms
@@ -101,11 +109,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 The 0.1.1 update includes a breaking change to how the Gemini CLI is invoked. No user action is required as the change is internal to the plugin scripts. However, if you have customized any scripts, you'll need to update them to use the new format.
 
 **What Changed:**
+
 - Gemini CLI now explicitly invokes the `googleSearch` tool
 - Added `-m "gemini-2.5-flash"` flag for model specification
 - Added `raw:true` parameter for unprocessed results
 
 **Benefits:**
+
 - More reliable search results
 - Explicit tool usage prevents ambiguity
 - Better control over response format

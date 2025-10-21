@@ -231,9 +231,7 @@ maintain_top_queries() {
     
     # Extract queries and counts, sort by count, keep top 10
     local top_queries_json
-    top_queries_json=$(jq -r '.top_queries | to_entries | sort_by(.value) | reverse | limit(10; .) | from_entries' "$AGGREGATE_FILE" 2>/dev/null)
-    
-    if [[ $? -ne 0 ]] || [[ "$top_queries_json" == "null" ]]; then
+    if ! top_queries_json=$(jq -r '.top_queries | to_entries | sort_by(.value) | reverse | limit(10; .) | from_entries' "$AGGREGATE_FILE" 2>/dev/null) || [[ "$top_queries_json" == "null" ]]; then
         log_error "Failed to extract and sort top queries from $AGGREGATE_FILE"
         return 1
     fi

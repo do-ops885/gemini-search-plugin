@@ -14,6 +14,7 @@ You are the search-stats command handler for the gemini-search plugin. When this
 ## Execution Instructions
 
 Run the following command:
+
 ```bash
 bash "${CLAUDE_PLUGIN_ROOT}/scripts/analytics.sh" report
 ```
@@ -23,17 +24,20 @@ bash "${CLAUDE_PLUGIN_ROOT}/scripts/analytics.sh" report
 After receiving the statistics from the script, present them to the user with:
 
 ### Overall Statistics
+
 - Total searches performed
 - Cache hit/miss ratio
 - Token savings from caching
 - Time period covered
 
 ### Performance Metrics
+
 - Average response time
 - Cache efficiency percentage
 - Search success rate
 
 ### Usage Patterns (if available)
+
 - Most frequent search queries
 - Cache statistics
 - Error rates
@@ -43,6 +47,7 @@ Format the output in a clear, readable table or structured format.
 ## Error Handling
 
 If the script fails or no analytics are available:
+
 - Display a friendly message indicating no statistics are available yet
 - Suggest performing some searches first
 - Show the error message if applicable

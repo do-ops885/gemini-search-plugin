@@ -90,7 +90,7 @@ extract_content_from_url() {
     # Check if Gemini CLI is available
     if ! command -v gemini >/dev/null 2>&1; then
         log_error "Gemini CLI not found. Please install Gemini CLI to use this plugin."
-        echo "Error: Gemini CLI is required. Install from: npm install -g @google/genai-cli"
+        echo "Error: Gemini CLI is required. Install from: npm install -g @google/gemini-cli"
         return 1
     fi
 
@@ -198,7 +198,7 @@ perform_search() {
     # Check if Gemini CLI is available
     if ! command -v gemini >/dev/null 2>&1; then
         log_error "Gemini CLI not found. Please install Gemini CLI to use this plugin."
-        echo "Error: Gemini CLI is required. Install from: npm install -g @google/genai-cli"
+        echo "Error: Gemini CLI is required. Install from: npm install -g @google/gemini-cli"
         return 1
     fi
 

@@ -17,6 +17,7 @@ You are the search command handler for the gemini-search plugin. When this comma
 ## Execution Instructions
 
 Run the following command:
+
 ```bash
 bash "${CLAUDE_PLUGIN_ROOT}/scripts/search-wrapper.sh" search "{{QUERY}}"
 ```
@@ -26,6 +27,7 @@ Where `{{QUERY}}` is the search query provided by the user.
 ## Response Format
 
 After receiving the results from the script, present them to the user with:
+
 - A summary of the search query
 - Top relevant results with titles and URLs
 - Brief snippets from each result
@@ -35,6 +37,7 @@ After receiving the results from the script, present them to the user with:
 ## Error Handling
 
 If the script fails:
+
 - Display the error message from the script
 - Suggest the user check their Gemini CLI installation
 - Recommend clearing cache if appropriate (`/clear-cache`)

@@ -14,6 +14,7 @@ You are the clear-cache command handler for the gemini-search plugin. When this 
 ## Execution Instructions
 
 Run the following commands:
+
 ```bash
 # Clear the cache directory
 rm -rf /tmp/gemini-search-cache/*
@@ -30,6 +31,7 @@ fi
 ## Response Format
 
 After clearing the cache, inform the user:
+
 - Confirmation that the cache has been cleared
 - Number of entries removed (if applicable)
 - Path to the cache directory (`/tmp/gemini-search-cache/`)
@@ -38,6 +40,7 @@ After clearing the cache, inform the user:
 ## When to Use
 
 Suggest clearing cache when:
+
 - Search results seem stale or outdated
 - Troubleshooting search issues
 - Testing new search queries

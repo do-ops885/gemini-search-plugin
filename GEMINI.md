@@ -37,6 +37,7 @@ gemini -p "/tool:googleSearch query:\"search query\" raw:true" --yolo --output-f
 ### 3. Grounded Web Search Behavior
 
 When the user asks for a search:
+
 - The Gemini CLI agent receives the search query
 - It recognizes the need for external information
 - Since `google_web_search` is the only available tool, it uses that for grounding
@@ -48,10 +49,11 @@ When the user asks for a search:
 This plugin requires the Gemini CLI to be installed:
 
 ```bash
-npm install -g @google/genai-cli
+npm install -g @google/gemini-cli
 ```
 
 Verify installation:
+
 ```bash
 gemini --version
 ```
